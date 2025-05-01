@@ -9,7 +9,6 @@ const openai = new OpenAI({
 export async function POST(req: NextRequest) {
   try {
     const { inputText } = await req.json();
-    console.log('Received input:', inputText);
 
     if (!inputText) {
       return NextResponse.json(
@@ -18,7 +17,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    console.log('Making OpenAI request...');
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
