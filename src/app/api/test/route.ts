@@ -23,7 +23,7 @@ export async function GET() {
       message: completion.choices[0].message.content,
       model: completion.model
     }, { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('API Test Error:', error);
     return NextResponse.json({ 
       status: "error",
