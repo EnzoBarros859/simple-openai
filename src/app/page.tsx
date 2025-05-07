@@ -29,7 +29,7 @@ export default function Home() {
       } else {
         throw new Error(data.error || 'Failed to generate response');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('page Error:', error);
       setOutputText(`${error || 'Something went wrong'}`);
     } finally {
