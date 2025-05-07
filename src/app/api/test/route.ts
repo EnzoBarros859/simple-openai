@@ -6,7 +6,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     // Test with a simple prompt
     const completion = await openai.chat.completions.create({
