@@ -27,7 +27,7 @@ export async function GET() {
     console.error('API Test Error:', error);
     return NextResponse.json({ 
       status: "error",
-      error: error.message 
+      error: "The test API failed"
     }, { status: 500 });
   }
 } 
